@@ -26,12 +26,15 @@ function App() {
   );
   return (
     <QueryClientProvider client={queryClient}>
-      <Container>
-        <Header />
-        {page === "Calendar" ? <CalendarPage /> : null}
-        {page === "Sleep" ? <SleepPage /> : null}
-        {page === "Home" ? <HomePage /> : null}
-      </Container>
+      {page === "Home" ? (
+        <HomePage />
+      ) : (
+        <Container>
+          <Header />
+          {page === "Calendar" ? <CalendarPage /> : null}
+          {page === "Sleep" ? <SleepPage /> : null}
+        </Container>
+      )}
     </QueryClientProvider>
   );
 }

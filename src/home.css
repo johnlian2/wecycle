@@ -1,0 +1,222 @@
+.homePage {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homePage {
+  font-family: Newsreader;
+  line-height: 1.6;
+}
+
+.homePage header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.homePage .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homePage .navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.homePage .navbar a:hover {
+  color: #f0c7bc;
+}
+
+.homePage .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f0c7bc;
+}
+
+.homePage .main-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 120px; /* Offset for the fixed header */
+
+  background-image: url("./main1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  transition: background-image 0.5s ease;
+}
+
+.homePage.main-section h1 {
+  font-size: 36px;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.homePage .cta-button {
+  margin-top: 20px;
+  background-color: #f0c7bc;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.homePage .cta-button:hover {
+  background-color: #ff5c5b;
+}
+
+.homePage .cta-button:hover ~ .main-section {
+  background-image: url("./main2.png") !important;
+}
+
+.homePage .image-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homePage .first-image {
+  background-color: #f8e7a2; /*replace with image*/
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  height: 100vh;
+}
+
+.homePage .first-image-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Make sure content spans full width */
+  max-width: 1200px; /* Restrict content width */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.homePage .first-image h2 {
+  font-size: 48px; /* Large font for the "Good morning" text */
+  flex: 1; /* Push the text to the left */
+  text-align: left; /* Align text to the left */
+  margin-right: 20px; /* Add space between the heading and the paragraph */
+}
+
+.homePage .first-image p {
+  flex: 1; /* Push the paragraph to the right */
+  text-align: left; /* Align text to the right */
+  font-size: 18px; /* Standard font size */
+  max-width: 600px; /* Restrict paragraph width */
+}
+
+/* Second image section (background-color is a placeholder) */
+.homePage .second-image {
+  background-color: #f1c4d2; /*replace with image*/
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.homePage .info-section {
+  background-color: #f8f8f8;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /*text-align: center;*/
+  height: auto;
+  flex-wrap: wrap;
+
+  /*
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    height: auto;
+    margin-top: 0;
+    */
+}
+
+.homePage .info-container {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+  align-items: flex-end;
+  max-width: 50%;
+  text-align: right;
+  /*margin: 0 auto;
+    width: 100%;*/
+}
+
+.homePage .info-section h2 {
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: 0;
+  /*
+    margin-bottom: 20px;
+    flex: 1;
+    align-self: flex-start;
+    */
+}
+
+.homePage .info-section p {
+  max-width: 100%;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #555;
+  /*flex: 2;*/
+  text-align: left;
+}
+
+.homePage .info-image {
+  margin-top: 20px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  align-self: flex-end;
+  /*justify-content: center;*/
+}
+
+@media (max-width: 768px) {
+  .homePage .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homePage .info-container {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .homePage .info-section h2 {
+    text-align: center;
+    /*margin-left: 0;*/
+  }
+}
+
+.homePage {
+  scroll-behavior: smooth;
+}
