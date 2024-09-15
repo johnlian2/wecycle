@@ -27,16 +27,17 @@
   margin: 0 auto;
 }
 
-.homePage .navbar a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px 20px;
-  transition: color 0.3s ease;
+.hoverLink {
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 18px !important;
+  padding: 10px 20px !important;
+  transition: color 0.3s ease !important;
 }
 
-.homePage .navbar a:hover {
-  color: #f0c7bc;
+.hoverLink:hover {
+  cursor: pointer !important;
+  color: #f0c7bc !important;
 }
 
 .homePage .logo {

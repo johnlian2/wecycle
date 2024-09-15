@@ -1,16 +1,32 @@
 import "../home.css";
 import info1 from "../assets/info1.png";
+import { useAppStore } from "../modules/utils";
+import { useShallow } from "zustand/react/shallow";
 
 export function HomePage() {
+  const { page, setPage } = useAppStore(
+    useShallow((state) => ({
+      page: state.page,
+      setPage: state.setPage,
+    }))
+  );
   return (
     <div className="homePage">
       <header>
         <nav className="navbar">
-          <a href="#calendar">My Calendar</a>
-          <a href="#nutrition">Nutrition Log</a>
+          <span className="hoverLink" onClick={() => setPage("Calendar")}>
+            My Calendar
+          </span>
+          <span className="hoverLink" onClick={() => setPage("CalorieLog")}>
+            Nutrition Log
+          </span>
           <div className="logo">wecycle</div>
-          <a href="sleep.html">Sleep & Energy</a>
-          <a href="#information">Information</a>
+          <span className="hoverLink" onClick={() => setPage("Sleep")}>
+            Sleep & Energy
+          </span>
+          <span className="hoverLink" onClick={() => setPage("Assistant")}>
+            Assistant
+          </span>
         </nav>
       </header>
 
@@ -20,7 +36,9 @@ export function HomePage() {
             Prioritize Wellness, Empower Every Woman: Your Health, Your Strength
           </h1>
 
-          <button className="cta-button">Get Started</button>
+          <button className="cta-button" onClick={() => setPage("Calendar")}>
+            Get Started
+          </button>
         </div>
       </section>
 
@@ -40,9 +58,13 @@ export function HomePage() {
             <a href=""> progesterone </a> levels are high and your{" "}
             <a href=""> cervical mucus </a> levels will dry up. <br /> <br />
             <b> Nutrition: </b> you have currently had <b> 0 </b> calories
-            today. Log your calories <a href=""> here </a>. You have{" "}
-            <b> 2300 </b> calories remaining if you would like to meet your
-            daily calorie goal. <br /> <br />
+            today. Log your calories{" "}
+            <a href="#" onClick={() => setPage("CalorieLog")}>
+              {" "}
+              here{" "}
+            </a>
+            . You have <b> 2300 </b> calories remaining if you would like to
+            meet your daily calorie goal. <br /> <br />
             Since you are in your luteal phase, there is a high chance that you
             will be craving chocolates, sweets, and salty foods due to a drop in
             your serotonin 3 levels based on your previous calorie logs at this
@@ -82,7 +104,12 @@ export function HomePage() {
           healthcare of the future with Wecycle! For more information and to
           chat with our personalized health assistant who can answer questions
           about general women's health questions to giving personalized
-          recommendations for you, <a href="index.html"> click here </a>.
+          recommendations for you,{" "}
+          <a href="#" onClick={() => setPage("Assistant")}>
+            {" "}
+            click here{" "}
+          </a>
+          .
         </p>
 
         <img src={info1} alt="Descriptive text" className="info-image" />

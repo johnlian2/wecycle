@@ -32,12 +32,12 @@ export function isValidStr(str: unknown): str is ValidStr {
   return validStrSchema.safeParse(str).success;
 }
 
-type Page = "Calendar" | "Sleep" | "Home";
+type Page = "Calendar" | "Sleep" | "Home" | "CalorieLog" | "Assistant";
 
 export const useAppStore = create<{
   page: Page;
   setPage: (value: Page) => void;
 }>()((set) => ({
-  page: "Calendar" as Page,
+  page: "Home" as Page,
   setPage: (value) => set({ page: value }),
 }));

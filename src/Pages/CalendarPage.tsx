@@ -24,9 +24,7 @@ export function CalendarPage() {
         <PageTitle title="My Calendar" />
       </div>
       <Calendar
-        onClickDay={(value) =>
-          setLastPickedDates(lastPickedDates.concat([value]))
-        }
+        onClickDay={() => setOffCanvasState(new Date())}
         value={new Date()}
         calendarType="gregory"
         formatWeekday={(locale, date) =>

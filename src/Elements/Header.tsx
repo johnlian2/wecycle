@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="d-flex flex-wrap justify-content-center py-3 mb-4">
       <a
-        href="/"
+        href="/wecycle/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
         <img
@@ -36,37 +36,31 @@ export function Header() {
         <li className="nav-item">
           <span
             onClick={() => setPage("Calendar")}
-            className="nav-link"
-            style={{
-              color: "black",
-              cursor: "pointer",
-            }}
+            className="nav-link hoverLink"
           >
             My Calendar
           </span>
         </li>
         <li className="nav-item">
-          <span
-            onClick={() => setPage("Sleep")}
-            className="nav-link"
-            style={{
-              color: "black",
-              cursor: "pointer",
-            }}
-          >
+          <span onClick={() => setPage("Sleep")} className="nav-link hoverLink">
             Sleep & Energy
           </span>
         </li>
         <li className="nav-item">
-          <a
-            href="#"
-            className="nav-link"
-            style={{
-              color: "black",
-            }}
+          <span
+            onClick={() => setPage("CalorieLog")}
+            className="nav-link hoverLink"
           >
-            My Profile
-          </a>
+            Nutrition Log
+          </span>
+        </li>
+        <li className="nav-item">
+          <span
+            onClick={() => setPage("Assistant")}
+            className="nav-link hoverLink"
+          >
+            Assistant
+          </span>
         </li>
         <li className="nav-item">
           <span
@@ -74,6 +68,8 @@ export function Header() {
             className="nav-link active"
             style={{
               backgroundColor: "#F0C7BC",
+              fontSize: "20px",
+              cursor: "pointer",
             }}
             aria-current="page"
           >
