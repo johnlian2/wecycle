@@ -58,7 +58,11 @@ This component integrates an AI Health Assistant that offers health advice and r
 # Credits
 
 Our awesome team!!!
+
 Yulee Kang - Sophomore, Fairfax, VA, William & Mary
+
 Osaru Osagie - Sophomore, Calgary, AB, University of Waterloo
+
 Brianna Matey - Sophomore, Brooklyn, NY, Boston University
+
 John Lian - Senior, Boston, MA, Rensselaer Polytechnic Institute
