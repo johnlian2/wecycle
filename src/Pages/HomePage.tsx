@@ -2,8 +2,10 @@ import "../home.css";
 import info1 from "../assets/info1.png";
 import { useAppStore } from "../modules/utils";
 import { useShallow } from "zustand/react/shallow";
+import { useState } from "react";
 
 export function HomePage() {
+  const [mouseInButton, setMouseInButton] = useState(false);
   const { page, setPage } = useAppStore(
     useShallow((state) => ({
       page: state.page,
@@ -30,13 +32,23 @@ export function HomePage() {
         </nav>
       </header>
 
-      <section className="main-section" id="main">
+      <section
+        className={
+          mouseInButton ? "main-section main-section-alt-image" : "main-section"
+        }
+        id="main"
+      >
         <div className="main-container">
           <h1>
             Prioritize Wellness, Empower Every Woman: Your Health, Your Strength
           </h1>
 
-          <button className="cta-button" onClick={() => setPage("Calendar")}>
+          <button
+            className="cta-button"
+            onClick={() => setPage("Calendar")}
+            onMouseEnter={() => setMouseInButton(true)}
+            onMouseLeave={() => setMouseInButton(false)}
+          >
             Get Started
           </button>
         </div>

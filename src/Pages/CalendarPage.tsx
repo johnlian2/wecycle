@@ -10,7 +10,7 @@ const steps = [
   {
     target: ".my-first-step",
     content:
-      "Select the dates of your last two periods (older first) to recieve personalized information.",
+      "Select the dates of your last two periods (older first) to receive personalized information.",
   },
 ];
 

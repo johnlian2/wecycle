@@ -60,7 +60,12 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 100px 20px;
-  transition: background-image 0.5s ease;
+  transition: background-image 0.4s ease;
+}
+
+.homePage .main-section-alt-image {
+  background-image: url("/wecycle/main2.jpg") !important;
+  transition: background-image 0.4s ease;
 }
 
 .homePage.main-section h1 {
@@ -83,10 +88,6 @@
 
 .homePage .cta-button:hover {
   background-color: #ff5c5b;
-}
-
-.homePage .cta-button:hover ~ .main-section {
-  background-image: url("/wecycle/main2.jpg") !important;
 }
 
 .homePage .image-section {
