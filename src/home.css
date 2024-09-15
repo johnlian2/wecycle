@@ -54,7 +54,7 @@
   text-align: center;
   padding-top: 120px; /* Offset for the fixed header */
 
-  background-image: url("./main1.png");
+  background-image: url("/wecycle/main1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@
 }
 
 .homePage .cta-button:hover ~ .main-section {
-  background-image: url("./main2.png") !important;
+  background-image: url("/wecycle/main2.jpg") !important;
 }
 
 .homePage .image-section {
